@@ -1,5 +1,8 @@
 """Dumpon.us settings."""
 
+import sys
+sys.path.append('apps')
+
 PROJECT_NAME = "dumpon.us"
 
 DEBUG = True 
