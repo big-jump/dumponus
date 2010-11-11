@@ -1,9 +1,11 @@
 """Dumpon.us settings."""
 
-import sys
-sys.path.append('apps')
+import sys, os
+from os.path import join as pjoin
 
-PROJECT_NAME = "dumpon.us"
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
+sys.path.append('apps')
 
 DEBUG = True 
 TEMPLATE_DEBUG = DEBUG
@@ -27,9 +29,9 @@ LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 USE_I18N = True
 
-MEDIA_ROOT = '/home/user/'+PROJECT_NAME+'/media/'
+MEDIA_ROOT = pjoin(PROJECT_PATH, 'media')
 MEDIA_URL = '/media/'
-ADMIN_MEDIA_PREFIX = '/media/admin/'
+ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
 
 SECRET_KEY = 'RANDOM_KEY_HERE'
 
@@ -59,7 +61,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
-   "/home/user/"+PROJECT_NAME+"/templates"
+    pjoin(PROJECT_PATH, 'templates'),
 )
 
 INSTALLED_APPS = (
