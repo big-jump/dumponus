@@ -1,13 +1,20 @@
+# Vim cruft
 *~
-*.pyc
 *.swm
 *.swn
 *.swo
 *.swp
+
+# Python cruft
+*.pyc
+
+# WSGI
 *.wsgi 
 
+# Installation-specific files
 *.db
-
 media/uploads/*
 .private-settings
 
+# Third party add-ons, ok. Git doesn't need to track their histories, though.
+.svn
