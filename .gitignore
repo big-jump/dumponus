@@ -1,0 +1,13 @@
+*~
+*.pyc
+*.swm
+*.swn
+*.swo
+*.swp
+*.wsgi 
+
+*.db
+
+media/uploads/*
+.private-settings
+
