@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 *~
 *.pyc
+=======
+# Vim cruft
+*~
+>>>>>>> 9c895015e1b382c0a15c83ddf1b705a2f41c1353
 *.swm
 *.swn
 *.swo
 *.swp
+<<<<<<< HEAD
 *.wsgi 
 
 *.db
@@ -11,3 +17,19 @@
 media/uploads/*
 .private-settings
 
+=======
+
+# Python cruft
+*.pyc
+
+# WSGI
+*.wsgi 
+
+# Installation-specific files
+*.db
+media/uploads/*
+.private-settings
+
+# Third party add-ons, ok. Git doesn't need to track their histories, though.
+.svn
+>>>>>>> 9c895015e1b382c0a15c83ddf1b705a2f41c1353
