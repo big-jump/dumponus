@@ -1,1 +1,10 @@
 dumpon.us - an HTML5/Django anonymous file uploader.
+
+
+REQUIREMENTS:
+-Django 1.1+
+-django-tagging
+-South (optional)
+-django-extensions (optional)
+
+

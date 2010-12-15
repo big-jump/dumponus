@@ -14,6 +14,4 @@ urlpatterns = patterns('',
     url(r'^list/$', 'upload.views.upload_list', name="upload-list"),
     url(r'^(?P<id>\d+)/$', 'upload.views.upload_detail', name="upload-detail"),
 	url(r'^admin/', include(admin.site.urls), name="admin"),
-    #serving static media with django NOTE: this is for development only
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT }),
 )

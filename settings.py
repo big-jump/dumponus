@@ -1,13 +1,16 @@
-"""Dumpon.us settings."""
+#--------------------------
+# dumpon.us main settings.
+#--------------------------
 
 import sys, os
 from os.path import join as pjoin
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
-sys.path.append('apps')
+sys.path.append(pjoin(PROJECT_PATH,'apps'))
 
 DEBUG = True 
+
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -25,12 +28,17 @@ DATABASES = {
 }
 
 TIME_ZONE = 'America/Toronto'
+
 LANGUAGE_CODE = 'en-us'
+
 SITE_ID = 1
+
 USE_I18N = True
 
 MEDIA_ROOT = pjoin(PROJECT_PATH, 'media')
+
 MEDIA_URL = '/media/'
+
 ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
 
 SECRET_KEY = 'RANDOM_KEY_HERE'
@@ -75,10 +83,11 @@ INSTALLED_APPS = (
     'upload',
     'tagging',
     'south',
-    'convert',
+    'sorl.thumbnail',
     'pagination', 
+    'django_extensions',
 )
 
 #Load instatalltion specific settings/passwords.
-execfile('.private-settings')
+execfile(pjoin(PROJECT_PATH, '.private-settings'))
 
