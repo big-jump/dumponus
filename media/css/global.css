@@ -258,13 +258,16 @@ footer {
     overflow:hidden;
     display:block;
 }
- @media only screen and (max-device-width: 480px) {
-  footer {
+/*
+@media only screen and (max-device-width: 480px) {
+
+footer {
     -webkit-border-radius: 0px;
     border-radius:0px:
     width:100%;
     min-width:100%;
     max-width:100%;
     padding:10px 0;
-  }
  }
+}
+*/
