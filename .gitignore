@@ -9,3 +9,4 @@
 .private-settings
 media/uploads/*
 .svn
+logs
