@@ -22,7 +22,9 @@
 {% autopaginate latest 15 %}
 <div id="latest-gallery">
 {% for upload in latest %}
-    <p><a href="{% url upload-detail upload.id %}" title="{{ upload.name }}"><span><img {% if upload.type == "video" %}src="/media/img/video.jpg"{% endif %}src="{% thumbnail upload.upload 125x125 %}"><br>{{ upload.name }}</span></a></p>
+    {% thumbnail upload.upload "125x125" crop="center" as im %}
+    <p><a href="{% url upload-detail upload.id %}" title="{{ upload.name }}"><span><img {% if upload.type == "video" %}src="/media/img/video.jpg"{% endif %}src="{{ im.url }}"><br>{{ upload.name }}</span></a></p>
+    {% endthumbnail %}
 {% endfor %}
 </div>
 {% paginate %}
